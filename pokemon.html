@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My Website</title>
+    <link rel="stylesheet" href="./pokemon.css">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div id="search">
+        <input id="search-input" required placeholder="Enter Pokemon"></input>
+        <button id="search-button"><i class="fa fa-search"></i></button>
+    </div>
+    <div id="card">
+        <div id="card-inner">
+            <div id="card-front" class="card-face">
+                <div id="sprite-container"></div>
+            </div>
+            <div id="card-back" class="card-face">
+                <div id="stats">
+                    <div id="pokemon-name"></div>
+                    <div id="pokemon-id"></div>
+                    <div id="weight"></div>
+                    <div id="height"></div>
+                    <div id="types"></div>
+                    <div id="hp"></div>
+                    <div id="attack"></div>
+                    <div id="defense"></div>
+                    <div id="special-attack"></div>
+                    <div id="special-defense"></div>
+                    <div id="speed"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="pokemon.js"></script>
+</body>
+</html>

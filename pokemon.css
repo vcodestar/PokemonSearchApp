@@ -1,0 +1,151 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+    /* https://www.freepik.com/free-vector/red-background-with-zoom-lines_24572830.htm#fromView=search&page=1&position=0&uuid=9f2770ff-36e6-4793-b710-e7dade3e3844*/
+    background: url("poke_bg.jpg") no-repeat center center;
+    background-size: cover;
+}
+
+#card {
+    position: absolute;
+    top: 30%;
+    width: 300px;
+    height: 400px;
+    perspective: 1000px; 
+}
+
+#card-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 1s;
+}
+
+#card:hover #card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; 
+}
+
+#sprite-container {
+    min-width: 200px;
+    min-height: 230px;
+    background: rgba(255, 255, 255, 0.26);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    text-align: center; /* Center the sprite */
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+    margin-bottom: 85px; /* Space below the sprite */
+    border-radius: 25px;
+}
+
+#sprite {
+    width: 180px; 
+    height: auto;
+}
+
+#card-front {
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.26);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#card-back {
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border-radius: 20px;
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transform: rotateY(180deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: aliceblue;
+}
+
+#search {
+    display: flex;
+    margin-bottom: 70px;
+    position: absolute;
+    top: 25%; 
+    justify-content: center;
+    align-self: center;
+    padding-left: 3vh;
+}
+
+#search-input {
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: none;
+    text-align: center;
+    border-radius: 25px;
+    height: 3vh;
+    outline: none;
+}
+
+#search-button {
+    border-radius: 50px;
+    background-color: transparent;
+    border: none;
+    min-width: 3vh;
+    cursor: pointer;
+    padding-left: 10px;
+}
+
+i {
+    color: white;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+
+
+#stats {
+    margin-top: 15px;
+    min-width: 10vh;
+    min-height: 35vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    text-align: center;
+    line-height: 3.5vh;
+}
